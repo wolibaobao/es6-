@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    // 场景1
+    // 假定有一个对象数组（A）,找到符合条件的对象
+
+    var users = [
+        {
+            name: 'laowang',
+            age: '25'
+        }, {
+            name: 'xiaoqing',
+            age: '30'
+        }, {
+            name: 'xiaozhang',
+            age: '66'
+        }
+    ]
+
+    userr = users.find(function (user) {
+        console.log(user)
+        return user.name == 'xiaoqing'
+    })
+    console.log(userr)   //{name: "xiaoqing", age: "30"}
+
+
+    // 场景2
+    // 假定有一个对象数组（A）,根据指定对象的条件找到数组中符合条件的对象
+
+    var users2 = [
+        {
+            name: 'laowang',
+            id: '1'
+        }, {
+            name: 'xiaoqing',
+            id: '2'
+        }, {
+            name: 'xiaozhang',
+            id: '3'
+        }
+    ]
+    var id = { id: '1', name: 'wocalei' }
+
+    function pipei(users2, id) {
+        return users2.find(function (users2) {
+            return users2.id === id.id
+        })
+    }
+    console.log(pipei(users2, id))  //{name: "laowang", id: "1"}
+
+</script>
+
+</html>

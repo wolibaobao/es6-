@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    a = {
+        name: '齐龙龙',
+        age: "18"
+    }
+    var products = [{
+        name: "cucumber",
+        type: "vegetable",
+        quantity: 0,
+        price: 1
+    }, {
+        name: "banana",
+        type: "fruit",
+        quantity: 10,
+        price: 16
+    }, {
+        name: "celery",
+        type: "vegetable",
+        quantity: 30,
+        price: 8
+    }, {
+        name: "orange",
+        type: "fruit",
+        quantity: 3,
+        price: 6
+    }];
+    products.filter((item, index) => {
+        console.log(item, index)
+        if (item.name == 'banana') {
+            products.splice(index, 1, a)
+        }
+    })
+    console.log(products)
+</script>

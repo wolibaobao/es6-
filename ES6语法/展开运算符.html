@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var arr = [1,2,3,4,5,6,7,8,9,10]
+    function aa(e){
+        return e.reduce(function(sum,number){
+            return sum + number
+        },0)
+    }
+
+    console.log(aa(arr))
+
+    function aa2(...number){
+        return number.reduce((sum,number)=>{
+            return sum + number            
+        },0)
+    }
+    console.log(aa2(1,2,3,4,5))
+
+    const a = ['1','2','3','4']
+    const b = ['5','6','7','8']
+    var aa = a.concat(b)   //数组拼接的方法。 concat
+    console.log(aa)
+
+    console.log([...a,...b,'9',10])  //这个是展开运算符。 ES6
+
+    const yanse = ['yellow','red','blue']
+    function aa3(...yanse){
+        if(yanse.indexOf('make') < 0){      //判断有没有make
+            alert('没有make')
+            return ['ckie',...yanse]
+        }
+        return yanse
+    }
+    console.log(aa3('yellow','red','blue'))
+
+</script>
+</html>

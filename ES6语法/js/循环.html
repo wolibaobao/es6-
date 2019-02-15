@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+
+    <style>
+        option {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div v-for='i in a'>
+
+            <select name="" id="" style="float:Left;height: 50px;margin-right:20px;">
+               <option value="">{{i.name}}</option>
+               <option value="" v-for="k in i.clist">
+                   {{k.name}}
+               </option>
+           </select>
+
+        </div> -->
+
+
+        <template>
+                <el-select v-model="value" placeholder="请选择">
+                  <el-option v-for="item in a" >
+                  </el-option>
+                  
+                   <el-option v-for="k in item" :key="k.name" :label="k.name" :value="k.name">
+                  </el-option>
+                  
+                  
+                </el-select>
+              </template>
+
+    </div>
+</body>
+
+</html>
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.4.11/lib/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            value: '',
+            options: [{
+                value: '选项1',
+                label: '黄金糕'
+            }, {
+                value: '选项2',
+                label: '双皮奶'
+            }, {
+                value: '选项3',
+                label: '蚵仔煎'
+            }, {
+                value: '选项4',
+                label: '龙须面'
+            }, {
+                value: '选项5',
+                label: '北京烤鸭'
+            }],
+            a: [{
+                "flink": "https://www.baidu.com/",
+                "clist": [{
+                    "flink": "https://lanhuapp.com/",
+                    "name": "正大",
+                    "ptypename": "高校网站",
+                    "remark": "的方法",
+                    "id": "112",
+                    "orlast": 1,
+                    "ptypeid": "111",
+                    "pids": "111"
+                }, {
+                    "flink": "aagtgf",
+                    "name": "aa",
+                    "ptypename": "高校网站",
+                    "remark": "aa",
+                    "id": "8429f88d0c2542b0b8d9a939ff572aa8",
+                    "orlast": 1,
+                    "ptypeid": "111",
+                    "pids": null
+                }],
+                "name": "高校网站",
+                "ptypename": "高校网站",
+                "remark": "gx",
+                "id": "111",
+                "orlast": 0,
+                "ptypeid": "0",
+                "pids": "0"
+            }, {
+                "flink": "",
+                "clist": [{
+                    "flink": "https://www.baidu.com/",
+                    "name": "经贸",
+                    "ptypename": "中等职业技术学校",
+                    "remark": "fffgggg",
+                    "id": "dca11dfd6f224471bb13e19a5a7400f0",
+                    "orlast": 1,
+                    "ptypeid": "54fe1d985fd546eea7e2bc9c6ff43e91",
+                    "pids": null
+                }],
+                "name": "中等职业技术学校",
+                "ptypename": "中等职业技术学校",
+                "remark": "tttyy",
+                "id": "54fe1d985fd546eea7e2bc9c6ff43e91",
+                "orlast": 0,
+                "ptypeid": "0",
+                "pids": null
+            }, {
+                "flink": "",
+                "clist": [{
+                    "flink": "https://www.baidu.com/",
+                    "name": "周大福",
+                    "ptypename": "兄弟协会网站",
+                    "remark": "mmm",
+                    "id": "635b5f07579548c2bc700fe672ad00bd",
+                    "orlast": 1,
+                    "ptypeid": "a9b62704f862432e81a1a75573bc5339",
+                    "pids": null
+                }],
+                "name": "兄弟协会网站",
+                "ptypename": "兄弟协会网站",
+                "remark": "aaa",
+                "id": "a9b62704f862432e81a1a75573bc5339",
+                "orlast": 0,
+                "ptypeid": "0",
+                "pids": null
+            }]
+
+
+
+        },
+        mounted: function() {
+            this.a.forEach(element => {
+                console.log(element.clist)
+
+                return element.clist.forEach(item => {
+                    console.log(item.name)
+                })
+            });
+        }
+    })
+</script>

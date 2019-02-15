@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+
+var a = ['red','blue','black']
+
+
+
+var [a,b,c] = a;     //按照下标  0 1 2   red blue black
+console.log(a,b,c)        // red blue black
+
+var a = ['red','blue','black']
+var {length} = a;     //length来吧数组个子返回回来
+console.log(length)        // 3
+
+// 结合展开运算符
+var [...name] = a
+console.log(name)
+
+var a,b;
+[a,b] = [100,400];
+console.log(a,b)
+
+var arr =[
+    {
+        name:'qilonglong',age:'25'
+    },{
+        name:'xiaohong',age:'25'
+    },{
+        name:'laowang',age:'25'
+    },
+]
+
+
+var [age] = arr;  // [{age}] 才是第一条数据下的age 25
+console.log(age)  //   name:'qilonglong',age:'25'
+
+
+var points = [
+    [4,5],
+    [10,1],
+    [0,40]
+]
+
+let newPoints = points.map(pair =>{
+    // console.log(pair)
+    // var x = pair[0]
+    // var y = pair[1]
+    var [x,y] = pair
+    return {x,y}
+})
+console.log(newPoints)
+
+
+
+</script>

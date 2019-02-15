@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    var colors = ['red', 'blue', 'black']
+
+    //Es5的语法
+    for (var i = 0; i < colors.length; i++) {
+        console.log(colors[i])
+    }
+
+    //Es6的 ForEach
+    colors.forEach(function (color) {
+        console.log(color)
+    })
+    //练习
+    var Numbers = ['1', '2', '3', '4', '5']
+    var sum = 0;
+    Numbers.forEach(function (num) {
+        sum += Number(num);
+    })
+    console.log(sum)
+
+    console.log('==============================================================================')
+
+    let arr1=['a', 'b', 'c'];
+    let arr2=[1, 2, 3];
+
+    let json={};
+
+    arr1.forEach((val, i)=>{
+        // console.log(val,i)
+        arr2.forEach((val_s, i_s)=>{
+            // console.log(val_s, i_s)
+            if(i===i_s){
+                json[val]=val_s;
+                console.log(val_s)
+            }
+        });
+    });
+    console.log(json)
+
+</script>
+
+</html>

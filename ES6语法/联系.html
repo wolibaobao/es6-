@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [
+
+        {
+            name: 1,
+            title: '安安安安'
+        }, {
+            name: 1,
+            title: '啊啊啊'
+        }, {
+            name: 1,
+            title: '粉丝'
+        }
+
+    ];
+    arr.forEach((Element, index) => {
+        console.log(Element, index)
+        if (Element.title == '粉丝') {
+            console.log(index)
+        }
+    })
+
+    var arr2 = ['啊', '吧', '粉丝']
+    arr2.forEach((elemnt, index) => {
+        console.log(elemnt, index)
+        if (elemnt == '吧') {
+            console.log(index)
+        }
+    })
+
+
+    var arr3 = [
+
+        {
+            name: 1,
+            title: '安安安安'
+        }, {
+            name: 1,
+            title: '啊啊啊'
+        }, {
+            name: 1,
+            title: '粉丝'
+        }
+
+    ];
+
+    let xsz = arr3.filter((elemnt, index) => {
+        console.log(elemnt, index)
+        return elemnt.title
+
+    })
+    console.log(xsz)
+
+    //for in 
+    console.log('------------------------------------')
+    var arr4 = [
+
+        {
+            name: 1,
+            title: '安安安安'
+        }, {
+            name: 1,
+            title: '啊啊啊'
+        }, {
+            name: 1,
+            title: '粉丝'
+        }
+
+    ];
+    for (i in arr4) {
+        console.log(i, arr4[i])
+        if (arr4[i].title == '粉丝') {
+            console.log(i)
+        }
+    }
+</script>
+
+</html>

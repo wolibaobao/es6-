@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{width: 500px;height: 500px;background: darkcyan;}
+			#div2{width: 200px;height: 200px;background: darkblue;}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="div1">
+			
+			<div id="div2"></div>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		//什么叫做事件冒泡呢。说白了就是。父级的事件子机也会继承
+		div1.onclick=function(){
+			alert(2)
+		}
+		 
+		div2.onclick=function(e){		//参数传进来的e不兼容ie   event火狐不兼容   所以才有了   e || event 解决兼容
+			var ev= e || event;
+			ev.cancelBubble=true    //取消冒泡    防止事件的事件贯穿到子级里面
+			ev.stopPropagation()    // 这个也能阻止事件冒泡，但是高级浏览器才支持IE8+  移动端也支持    所以和上面俩个都能阻止事件冒泡
+			alert(1)
+		}
+		
+	</script>
+</html>
+
+

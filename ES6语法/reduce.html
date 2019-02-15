@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+
+    console.log('================下面是reduce.js=====================')
+    var users = [10, 20, 30]
+
+    var a = users.reduce(function (sum, user) {
+        return sum + user
+    }, 0)
+    console.log(a)    //60
+
+
+    var pros = [
+        {
+            color: 'red'
+        }, {
+            color: 'yellow'
+        }, {
+            color: 'blue'
+        }
+    ]
+    var xzs = pros.reduce(function (xsz, pross) {
+        console.log(xsz, pross)
+        xsz.push(pross.color)
+        return xsz
+    }, [])
+    console.log(xzs)   //["red", "yellow", "blue"]
+</script>
